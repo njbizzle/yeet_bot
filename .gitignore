@@ -1,0 +1,8 @@
+# contains bot key, very important that it is ignored
+.env
+
+# something added by pycharm, probably good to ignore
+.idea/
+
+# just not nessicary to add to git
+venv/
