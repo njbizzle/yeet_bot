@@ -1,0 +1,20 @@
+{
+  "guild_ids": {
+    "123456789_temp": {
+      "members": {
+        "123456789_temp": {
+          "member_value": 0,
+          "member_saved_words": []
+        }
+      }
+    },
+    "987654321_temp": {
+      "members": {
+        "123456789_temp": {
+          "member_value": 0,
+          "member_saved_words": []
+        }
+      }
+    }
+  }
+}

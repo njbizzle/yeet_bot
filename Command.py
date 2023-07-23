@@ -9,7 +9,7 @@ class Command:
         self.roles_blacklist = roles_blacklist
 
     def check(self, command_name, message=None):
-        if command_name != command_name:
+        if command_name != self.command_name:
             return False
 
         can_run = True # defaults to true if roles not specified

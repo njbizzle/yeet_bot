@@ -5,6 +5,7 @@ import discord
 from dotenv import load_dotenv
 from discord.ext import commands
 
+import JsonManager
 # my stuff :)
 from CommandManager import CommandManager
 from Command import Command
@@ -29,6 +30,8 @@ client = discord.Client(intents=intents)
 @client.event
 async def on_ready():
     print(f'{client.user.name} has connected.')
+    for guild in client.guilds:
+        JsonManager.add_new_guild(guild)
 
 @client.event
 async def on_message(message):

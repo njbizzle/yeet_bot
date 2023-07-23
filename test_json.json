@@ -1,0 +1,15 @@
+{
+  "guild_ids": {
+    "1007396812920999947": {
+      "members": {
+        "1007392178785484871": {
+          "member_value": 10,
+          "member_saved_words": [
+            "hello",
+            "hi"
+          ]
+        }
+      }
+    }
+  }
+}
