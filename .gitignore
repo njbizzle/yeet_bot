@@ -6,3 +6,6 @@
 
 # just not nessicary to add to git
 venv/
+
+# just dont really need the error log
+err.log
