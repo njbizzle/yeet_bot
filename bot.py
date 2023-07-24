@@ -5,8 +5,8 @@ import discord
 from dotenv import load_dotenv
 from discord.ext import commands
 
-import JsonManager
 # my stuff :)
+import JsonManager
 from CommandManager import CommandManager
 from Command import Command
 
@@ -24,17 +24,16 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 GUILD_ID = os.getenv("TEST_GUILD_ID")
 
 
+#client = discord.Client(intents=intents)
+
+class YeetBot(discord.Client):
+    async def on_ready(self):
+        print(f'{self.user.name} has connected.')
+        for guild in self.guilds:
+            JsonManager.add_new_guild(guild)
+    async def on_message(self, message):
+        await commandManager.on_message(message)
+
 intents = discord.Intents.all() # gives the bot total control over everything i think
-client = discord.Client(intents=intents)
-
-@client.event
-async def on_ready():
-    print(f'{client.user.name} has connected.')
-    for guild in client.guilds:
-        JsonManager.add_new_guild(guild)
-
-@client.event
-async def on_message(message):
-    await commandManager.on_message(message)
-
-client.run(BOT_TOKEN)
+yeet_bot = YeetBot(intents=intents)
+yeet_bot.run(BOT_TOKEN)

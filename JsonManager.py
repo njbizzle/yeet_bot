@@ -73,8 +73,7 @@ def add_new_guild(guild):
     # if guild already added
     if str(guild.id) in data["guild_ids"]:
         return data["guild_ids"][guild_id]
-    else:
-        print("FALSE")
+
     data["guild_ids"][guild_id] = GUILD_INFO_BLANK
 
     write_json(TEST_JSON_PATH, data)
