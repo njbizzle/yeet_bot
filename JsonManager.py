@@ -45,7 +45,7 @@ def exceptionCheck(member, guild, data):
         raise MemberNotInGuildException
 
 # ----- adding methods -----
-def add_new_member(member, guild):
+def add_member(member, guild):
     member_id = str(member.id)
     guild_id = str(guild.id)
 
@@ -65,7 +65,7 @@ def add_new_member(member, guild):
     return MEMBER_INFO_BLANK
 
 
-def add_new_guild(guild):
+def add_guild(guild):
     guild_id = str(guild.id)
 
     data = read_json(TEST_JSON_PATH)
@@ -94,7 +94,7 @@ def get_member_info(member, guild):
         return guild_data["members"][member_id]
     except:
         # if member not found
-        return add_new_member(member, guild)
+        return add_member(member, guild)
 
 # ----- setters -----
 def set_member_value(member, guild, new_value=0):

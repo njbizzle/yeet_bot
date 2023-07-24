@@ -30,7 +30,7 @@ class YeetBot(discord.Client):
     async def on_ready(self):
         print(f'{self.user.name} has connected.')
         for guild in self.guilds:
-            JsonManager.add_new_guild(guild)
+            JsonManager.add_guild(guild)
     async def on_message(self, message):
         await commandManager.on_message(message)
 
