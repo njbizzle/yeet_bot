@@ -10,8 +10,11 @@
           ]
         },
         "662014825185935376": {
-          "member_value": 0,
-          "member_saved_words": []
+          "member_value": 11,
+          "member_saved_words": [
+            "hello",
+            "test"
+          ]
         }
       }
     }
