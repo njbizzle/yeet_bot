@@ -2,7 +2,7 @@ from Command import Command
 import JsonManager as jm
 class SetJsonInfoCommand(Command):
     def __init__(self):
-        super().__init__("set_json_value")
+        super().__init__("set_value")
 
     async def run(self, params, message):
         try:
